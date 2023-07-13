@@ -27,6 +27,7 @@
 
 namespace Aternos\ModrinthApi\Api;
 
+use Aternos\ModrinthApi\ApiInterfaces\VersionFilesApiInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ConnectException;
@@ -47,7 +48,7 @@ use Aternos\ModrinthApi\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class VersionFilesApi
+class VersionFilesApi implements VersionFilesApiInterface
 {
     /**
      * @var ClientInterface

@@ -27,6 +27,7 @@
 
 namespace Aternos\ModrinthApi\Api;
 
+use Aternos\ModrinthApi\ApiInterfaces\TeamsApiInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ConnectException;
@@ -47,7 +48,7 @@ use Aternos\ModrinthApi\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class TeamsApi
+class TeamsApi implements TeamsApiInterface
 {
     /**
      * @var ClientInterface

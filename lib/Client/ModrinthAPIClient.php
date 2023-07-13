@@ -10,6 +10,13 @@ use Aternos\ModrinthApi\Api\UsersApi;
 use Aternos\ModrinthApi\Api\VersionFilesApi;
 use Aternos\ModrinthApi\Api\VersionsApi;
 use Aternos\ModrinthApi\ApiException;
+use Aternos\ModrinthApi\ApiInterfaces\MiscApiInterface;
+use Aternos\ModrinthApi\ApiInterfaces\ProjectsApiInterface;
+use Aternos\ModrinthApi\ApiInterfaces\TagsApiInterface;
+use Aternos\ModrinthApi\ApiInterfaces\TeamsApiInterface;
+use Aternos\ModrinthApi\ApiInterfaces\UsersApiInterface;
+use Aternos\ModrinthApi\ApiInterfaces\VersionFilesApiInterface;
+use Aternos\ModrinthApi\ApiInterfaces\VersionsApiInterface;
 use Aternos\ModrinthApi\Client\List\PaginatedProjectSearchList;
 use Aternos\ModrinthApi\Client\Options\ProjectSearchOptions;
 use Aternos\ModrinthApi\Client\Tags\Category;
@@ -46,19 +53,19 @@ class ModrinthAPIClient
 
     protected ?string $apiToken = null;
 
-    protected ProjectsApi $projects;
+    protected ProjectsApiInterface $projects;
 
-    protected VersionsApi $versions;
+    protected VersionsApiInterface $versions;
 
-    protected VersionFilesApi $versionFiles;
+    protected VersionFilesApiInterface $versionFiles;
 
-    protected UsersApi $users;
+    protected UsersApiInterface $users;
 
-    protected TeamsApi $teams;
+    protected TeamsApiInterface $teams;
 
-    protected TagsApi $tags;
+    protected TagsApiInterface $tags;
 
-    protected MiscApi $misc;
+    protected MiscApiInterface $misc;
 
     /**
      * ModrinthAPIClient constructor.
